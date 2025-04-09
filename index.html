@@ -1,12 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TeamMatch App</title>
-  </head>
-  <body>
-    <div id="app">Hello TeamMatch 👋</div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TeamMatch App</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .card { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+    .filter, .form-section { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h1>TeamMatch – Поиск партнёра для игры</h1>
+
+  <div class="filter">
+    <h2>Фильтры</h2>
+    <label>Город: <input type="text" placeholder="Москва, СПб..." /></label>
+    <label>Адрес: <input type="text" placeholder="Центр / Без разницы / Название корта" /></label>
+    <label>Тип игры:
+      <select>
+        <option>Падел</option>
+        <option>Теннис</option>
+        <option>Баскетбол</option>
+      </select>
+    </label>
+    <label>Уровень:
+      <select>
+        <option>Начинающий</option>
+        <option>Средний</option>
+        <option>Продвинутый</option>
+      </select>
+    </label>
+  </div>
+
+  <button onclick="alert('Форма пока в разработке')">Разместить объявление</button>
+
+  <div class="cards">
+    <h2>Объявления</h2>
+    <div class="card">
+      <strong>Падел / Москва</strong><br/>
+      Ищу напарника для игры вечером в центре. Средний уровень.
+    </div>
+    <div class="card">
+      <strong>Теннис / СПб</strong><br/>
+      Нужен партнёр на утренние тренировки в выходные. Продвинутый уровень.
+    </div>
+    <div class="card">
+      <strong>Баскетбол / Казань</strong><br/>
+      Собираем команду на 3x3. Без разницы, где играть.
+    </div>
+  </div>
+</body>
 </html>
